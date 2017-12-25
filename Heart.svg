@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000px" height="920px" viewBox="0 0 1000 920" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Heart</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FF8126" offset="0%"></stop>
+            <stop stop-color="#FF117E" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-12.000000, -52.000000)">
+        <g id="Heart" transform="translate(12.000000, 52.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <path d="M497,162.52 C537.36,66.86 629.56,0.02 736.8,0.02 C881.26,0.02 985.3,123.6 998.38,270.88 C998.38,270.88 1005.44,307.44 989.9,373.26 C968.74,462.9 919,542.54 851.94,603.32 L497,920 L148.04,603.3 C80.98,542.54 31.24,462.88 10.08,373.24 C-5.46,307.42 1.6,270.86 1.6,270.86 C14.68,123.58 118.72,0 263.18,0 C370.44,0 456.64,66.86 497,162.52 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

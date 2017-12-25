@@ -1,0 +1,315 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta name="description" content="">
+            <meta name="author" content="">
+            <link rel="icon" href="">
+
+            <title>Happy Birthday Loosu</title>
+
+            <!-- Bootstrap core CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+            <!-- Custom styles for this template -->
+            <style>
+                .heart {
+                    text-align: center;
+                    position: fixed;
+                    bottom: 0;
+                    left: 50%;
+                    cursor: pointer;
+
+                    transform: translateX(-50%) scale(0);
+                    -webkit-transform: translateX(-50%) scale(0);
+                    -moz-transform: translateX(-50%) scale(0);
+                    -o-transform: translateX(-50%) scale(0);
+
+                    transform-origin: bottom;
+                     transition: all linear 0.5s;
+                    -webkit-transition: all linear 0.5s;
+                    -moz-transition: all linear 0.5s;
+                }
+                .heart.fly {
+                    bottom: 50%;
+        /*           margin-bottom: -115px; */
+
+                }
+                img {
+                    width: 250px;
+                }
+                .box-one {
+                    height: 3000px;
+                    position: relative;
+                }
+                .beat{
+                  animation-name:   beat;
+                    animation-direction: alternate;
+                    animation-duration: 0.25s;
+                    animation-fill-mode: both;
+                    animation-iteration-count: infinite;
+                }
+                .ballon-one,.ballon-two, .ballon-three,.ballon-four {
+                    width: 60px;
+                    position: fixed;  
+                    top: 100%;
+
+
+                    transition: top linear 1.5s;
+                    -webkit-transition: top linear 1.5s;
+                    -moz-transition: top linear 1.5s;
+                    -o-transition: top linear 1.5s;
+                }
+                .ballon-one-sm,.ballon-two-sm, .ballon-three-sm,.ballon-four-sm {
+                    width: 30px;
+                    position: fixed;
+                    top: 100%;
+
+                    transition: top linear 1.5s;
+                    -webkit-transition: top linear 1.5s;
+                    -moz-transition: top linear 1.5s;
+                    -o-transition: top linear 1.5s;
+
+                }
+                .ballon.in .ballon-one,
+                .ballon.in .ballon-two, 
+                .ballon.in .ballon-three,
+                .ballon.in .ballon-four ,
+                .ballon.in .ballon-one-sm,
+                .ballon.in .ballon-two-sm,
+                .ballon.in .ballon-three-sm,
+                .ballon.in .ballon-four-sm {
+                      top: -50%; 
+                }
+                .ballon-one{
+        /*         top: 10px;*/
+                 left:5%;   
+                    transition-delay: none;
+
+                }
+                .ballon-two{
+        /*         top: 50px;*/
+                 left:12%;   
+                    opacity: 0.6;
+                    transition-delay: 0.75s;
+                }
+
+                .ballon-three{
+        /*             top: 75px;*/
+                    left:22%;   
+                    opacity: 0.6;
+                    transition-delay: 0.25s;
+                }
+
+                .ballon-four{
+        /*            top: 65px;*/
+                    left:85%;   
+                    opacity: 0.6;
+                    transition-delay: o.55s;
+                }
+                .ballon-one-sm{
+        /*            top: 88px;*/
+                    left:85%;   
+                    opacity: 0.6;
+                    transition-delay: 1s;
+                }
+                .ballon-two-sm{
+        /*            top: 0;*/
+                    left:55%;   
+                    opacity: 0.6;
+                    transition-delay: 1.25s;
+                }
+
+                .ballon-three-sm{
+        /*            top: 92;*/
+                    left:15%;   
+                    opacity: 0.6;
+                    transition-delay: 1.50s;
+                }
+
+                .ballon-four-sm{
+        /*            top: 100px;*/
+                    left:8%;   
+                    opacity: 0.6;
+                    transition-delay: 1.75s;
+                }
+
+                @keyframes beat {
+                    0%{
+                        transform: scale(1);
+                    }
+                    100%{
+                        transform:  scale(1.2);
+                    }
+                }
+                .one, .two {
+                    position: fixed;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    z-index: 100;
+                    opacity: 0;
+
+                    transition: top linear 3.5s, opacity linear 0.5s;
+                }
+                .one.in, .two.in  {
+                    opacity: 1;
+                }
+                .one {
+                    top: calc(100% + 300px);
+                }
+                .two {
+                    top: -200px;
+                }
+            </style>
+
+        </head>
+
+
+        <body>
+            <div class="box-one">
+
+            </div>
+        <!--<div class="ballon"></div>-->
+            <!-- /.container -->
+        <h1 class="one">HAPPY BIRTHDAY</h1>
+            <h1 class="two">MY LOVE</h1>
+            <div class="heart" id="heart">
+        <img src="Heart.svg" alt="" class="svg" />
+        </div>
+            <audio id="sound" src="aud.m4a" ></audio>
+            <div class="ballon">
+            <img class="ballon-one" src="1.svg" alt="1">
+            <img class="ballon-two" src="2.svg" alt="1">
+            <img class="ballon-three" src="3.svg" alt="1">
+            <img class="ballon-four" src="4.svg" alt="1">
+            <img class="ballon-one-sm" src="1.svg" alt="1">
+            <img class="ballon-two-sm" src="2.svg" alt="1">
+            <img class="ballon-three-sm" src="3.svg" alt="1">
+            <img class="ballon-four-sm" src="4.svg" alt="1">
+                </div>
+            <!-- Bootstrap core JavaScript
+            ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+            <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+            <script>
+                (function() {
+                    'use strict'
+
+                    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+                        var msViewportStyle = document.createElement('style')
+                        msViewportStyle.appendChild(
+                            document.createTextNode(
+                                '@-ms-viewport{width:auto!important}'
+                            )
+                        )
+                        document.head.appendChild(msViewportStyle)
+                    }
+
+                }())
+            </script>
+            <script>
+
+        $(window).scroll(function (event) {
+            var scroll = $(window).scrollTop();
+            // Do something
+                var boxOne = $(".box-one").height();
+                var boxOneLess = boxOne - 500;
+
+            var scale = scroll / boxOneLess;
+
+            if (scale > 0.85) {
+                $(".heart").addClass("fly");
+
+                setTimeout(function(){
+                $(".heart").css("margin-bottom","-115px");            
+                },10);
+                setTimeout(function(){
+                $(".heart img").addClass("beat");
+                },200);
+
+                if ($(".ballon").hasClass("in")){
+
+                }
+                else {
+                    $(".ballon").show();
+                    setTimeout(function(){
+                                    $(".ballon").addClass("in");
+                    },100);
+                }
+                if ($(".one").hasClass("in")){
+                }else{
+                $(".one").addClass("in");
+                $(".two").addClass("in");
+                }
+
+
+
+                if ($("#sound").hasClass("triggred")) {
+
+                }
+                else {
+                    playSound(); 
+                }
+                
+            }else {
+                 $(".heart").removeClass("fly")
+                  setTimeout(function(){
+                $(".heart").css("margin-bottom","0px");            
+                },10);
+                   setTimeout(function(){
+                $(".heart img").removeClass("beat");
+                },200);
+        //        $(".heart img").removeClass("beat");
+                            $(".ballon").hide().removeClass("in");
+
+                $(".one").removeClass("in");
+                $(".two").removeClass("in");
+            }
+            if (scale < 1){
+            $(".heart").css("transform", "translateX(-50%) scale("+scale+")");
+            }
+
+
+        });
+                $("#heart").click(function(){
+                   playSound(); 
+                    textAnim();
+                });
+                                var sound = document.getElementById('sound');
+
+                function playSound(){
+
+                    var sound = document.getElementById('sound');
+                            $("#sound").addClass("triggred")
+            sound.play();
+
+                }
+                sound.onended = function() {
+                                            $("#sound").removeClass("triggred")
+
+                }
+                function textAnim(){
+                var top =    $("#heart").position().top;
+
+                var bottom =    $("#heart").height();
+
+                    var posiTop = top - 100;
+                    var posiBottom = top + bottom + 50;
+
+                    $(".one").css("top", posiTop);
+                    $(".two").css("top", posiBottom);
+                    
+                    $(".one, .two").addClass("triggered");
+                    
+                }
+            </script>
+
+
+        </body>
+        </html>
